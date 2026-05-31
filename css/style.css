@@ -58,11 +58,94 @@ body {
 }
 
 .overview-section { padding: 12px 0 34px; }
-.reasons-section, .cta-section, .site-footer { padding: 28px 0; }
+.overview-section h2 { margin: 0 0 6px; color: var(--wl-deep-blue); }
+.overview-section h3 { margin: 0 0 16px; color: var(--wl-blue); font-weight: 600; }
+.overview-body {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.1vw, 1.08rem);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.reasons-section { padding: 28px 0 48px; }
+.reasons-section > .container > h2 { margin: 0 0 24px; color: var(--wl-deep-blue); }
+.reason-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.reason-card {
+  background: var(--wl-bg-soft);
+  border: 1px solid var(--wl-border-soft);
+  border-radius: 14px;
+  padding: 24px 22px;
+}
+.reason-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--wl-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: .88rem;
+  margin-bottom: 12px;
+}
+.reason-card h3 {
+  margin: 0 0 10px;
+  color: var(--wl-deep-blue);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+.reason-card p {
+  margin: 0;
+  font-size: .97rem;
+  line-height: 1.7;
+}
+
+.cta-section { padding: 40px 0 56px; }
+.cta-card {
+  background: linear-gradient(135deg, var(--wl-deep-blue) 0%, var(--wl-blue) 100%);
+  border-radius: 16px;
+  padding: 52px 40px;
+  text-align: center;
+  color: #fff;
+}
+.cta-card h2 {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+.cta-tagline {
+  margin: 0 auto 30px;
+  max-width: 560px;
+  opacity: .9;
+  font-size: clamp(1rem, 1.1vw, 1.08rem);
+  line-height: 1.72;
+}
+.cta-button {
+  display: inline-block;
+  background: #fff;
+  color: var(--wl-deep-blue);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 15px 36px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity .15s;
+}
+.cta-button:hover { opacity: .88; }
+
+.site-footer { padding: 28px 0; border-top: 1px solid var(--wl-border-soft); }
+.site-footer p { margin: 0; font-size: .9rem; color: #6b8aaa; }
 
 @media (max-width: 768px) {
   .hero-section { padding-top: 44px; }
   .answer-intro-section { padding: 4px 0 24px; }
   .answer-intro-card { padding: 18px 16px; border-radius: 12px; }
   .answer-intro-card p { font-size: 1rem; line-height: 1.7; }
+  .reason-list { grid-template-columns: 1fr; gap: 14px; }
+  .cta-card { padding: 36px 24px; }
 }
